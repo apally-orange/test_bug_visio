@@ -1,13 +1,24 @@
-import 'dart:async';
+import 'dart:io';
 
-import 'package:flutter/services.dart';
+import 'package:flutter/material.dart';
 
-class TestBugVisio {
-  static const MethodChannel _channel =
-      const MethodChannel('test_bug_visio');
+class TestViewPlugin extends StatelessWidget {
+  const TestViewPlugin({
+    Key key,
+  }) : super(key: key);
 
-  static Future<String> get platformVersion async {
-    final String version = await _channel.invokeMethod('getPlatformVersion');
-    return version;
+  @override
+  Widget build(BuildContext context) {
+    if (Platform.isAndroid) {
+      return AndroidView(
+        viewType: 'test_channel',
+        onPlatformViewCreated: _onPlatformViewCreated,
+      );
+    } else {
+      // No implemented
+      return Container();
+    }
   }
+
+  void _onPlatformViewCreated(int id) {}
 }

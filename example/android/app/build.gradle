@@ -58,6 +58,13 @@ flutter {
     source '../..'
 }
 
+repositories {
+    flatDir {
+        dir 'aars'
+    }
+}
+
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation(name:"VisioMoveEssential", ext:"aar")
 }
