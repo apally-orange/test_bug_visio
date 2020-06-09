@@ -58,6 +58,7 @@ flutter {
     source '../..'
 }
 
+//TODO add VisioMoveEssential.aar in folder example/android/app/aars
 repositories {
     flatDir {
         dir 'aars'

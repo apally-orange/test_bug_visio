@@ -39,6 +39,7 @@ android {
     }
 }
 
+//TODO add VisioMoveEssential.aar in folder android/aars
 repositories {
     flatDir {
         dir 'aars'
