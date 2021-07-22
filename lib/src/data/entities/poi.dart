@@ -1,6 +1,5 @@
-import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:collection/collection.dart';
 
 part 'poi.g.dart';
 part 'poi.freezed.dart';
@@ -12,32 +11,77 @@ enum RoomStatus {
   reserved,
 }
 
+typedef Deserialize<T> = T Function(Map<String, dynamic> map);
+
+extension JsonExtensions on List<dynamic> {
+  List<T> deserializeGqlList<T extends Object>(Deserialize<T> deserializer) {
+    return map(
+      (dynamic edge) {
+        final map = edge?['node'] as Map<String, dynamic>?;
+        if (map == null) {
+          return null;
+        }
+        return deserializer(map);
+      },
+    ).whereNotNull().toList();
+  }
+
+  List<T> deserializeList<T extends Object>(Deserialize<T> deserializer) {
+    return map(
+      (dynamic e) {
+        if (e == null) {
+          return null;
+        }
+        return deserializer(e as Map<String, dynamic>);
+      },
+    ).whereNotNull().toList();
+  }
+}
+
 /// A poi's building.
 @freezed
-abstract class PoiBuilding with _$PoiBuilding {
+class PoiBuilding with _$PoiBuilding {
   /// Creates a [PoiBuilding].
   @JsonSerializable(explicitToJson: true)
   const factory PoiBuilding({
-    @required String id,
-    String externalId,
-    String remoteControlId,
-    String flexOfficeId,
-    String title,
+    required String id,
+    String? externalId,
+    String? remoteControlId,
+    String? flexOfficeId,
+    required String title,
+    @Default(0) int minFloor,
+    @Default(0) int maxFloor,
+    @Default(false) bool isFake,
   }) = _PoiBuilding;
 
   /// Creates a [PoiBuilding] from json.
   factory PoiBuilding.fromJson(Map<String, dynamic> json) =>
       _$PoiBuildingFromJson(json);
+
+  factory PoiBuilding.all(String title) {
+    return PoiBuilding(
+      id: buildingAll,
+      flexOfficeId: buildingAll,
+      title: title,
+      minFloor: 0,
+      maxFloor: 0,
+      isFake: true,
+    );
+  }
+
+  static const buildingAll = 'all';
 }
 
 /// A poi's floor.
 @freezed
-abstract class PoiFloor with _$PoiFloor {
+class PoiFloor with _$PoiFloor {
   /// Creates a [PoiFloor].
   @JsonSerializable(explicitToJson: true)
   const factory PoiFloor({
-    String title,
-    String flexOfficeId,
+    String? title,
+    String? flexOfficeId,
+    int? floorIndex,
+    String? visioglobeId,
   }) = _PoiFloor;
 
   /// Creates a [PoiFloor] from json.
@@ -47,16 +91,16 @@ abstract class PoiFloor with _$PoiFloor {
 
 /// A poi's category.
 @freezed
-abstract class PoiCategory with _$PoiCategory {
+class PoiCategory with _$PoiCategory {
   /// Creates a [PoiCategory].
   @JsonSerializable(explicitToJson: true)
   const factory PoiCategory({
-    @required String id,
-    @required String title,
-    @required String technicalId,
-    String zoomLevel,
-    GqlImage icon,
-    @JsonKey(fromJson: _statusIconsFromJson) List<GqlImage> statusIcon,
+    required String id,
+    required String title,
+    required String technicalId,
+    String? zoomLevel,
+    GqlImage? icon,
+    @JsonKey(fromJson: _gqlImagesFromJson) List<GqlImage>? statusIcon,
   }) = _PoiCategory;
 
   /// Creates a [PoiCategory] from json.
@@ -66,22 +110,27 @@ abstract class PoiCategory with _$PoiCategory {
 
 /// A point of interet (POI).
 @freezed
-abstract class Poi with _$Poi {
+class Poi with _$Poi {
   /// Creates a [Poi].
   @JsonSerializable(explicitToJson: true)
   const factory Poi({
-    @required String id,
-    String location,
-    String roomId,
-    RoomStatus roomStatus,
-    String title,
-    String description,
-    String shortDescription,
-    @JsonKey(fromJson: _coordFromJson) double latitude,
-    @JsonKey(fromJson: _coordFromJson) double longitude,
-    @JsonKey(fromJson: _poiCategoriesFromJson) List<PoiCategory> categories,
-    @JsonKey(fromJson: _poiBuildingFromJson) PoiBuilding building,
-    @JsonKey(fromJson: _poiFloorFromJson) PoiFloor floor,
+    required String id,
+    String? location,
+    String? roomId,
+    RoomStatus? roomStatus,
+    String? title,
+    String? description,
+    String? shortDescription,
+    @JsonKey(fromJson: _coordFromJson) double? latitude,
+    @JsonKey(fromJson: _coordFromJson) double? longitude,
+    @Default(<PoiCategory>[])
+    @JsonKey(fromJson: _poiCategoriesFromJson)
+        List<PoiCategory> categories,
+    @JsonKey(fromJson: _poiBuildingFromJson) PoiBuilding? building,
+    @JsonKey(fromJson: _poiFloorFromJson) PoiFloor? floor,
+    @Default(<GqlImage>[])
+    @JsonKey(fromJson: _gqlImagesFromJson)
+        List<GqlImage> images,
   }) = _Poi;
 
   /// Creates a [Poi] from json.
@@ -89,10 +138,10 @@ abstract class Poi with _$Poi {
 }
 
 @freezed
-abstract class DirectoryPoi with _$DirectoryPoi {
+class DirectoryPoi with _$DirectoryPoi {
   const factory DirectoryPoi({
-    @required String id,
-    @required String title,
+    required String id,
+    required String title,
   }) = _DirectoryPoi;
   factory DirectoryPoi.fromJson(Map<String, dynamic> json) =>
       _$DirectoryPoiFromJson(json);
@@ -100,11 +149,11 @@ abstract class DirectoryPoi with _$DirectoryPoi {
 
 /// A Gql Response Image model.
 @freezed
-abstract class GqlImage with _$GqlImage {
+class GqlImage with _$GqlImage {
   /// Creates a [GqlImage].
   const factory GqlImage({
-    String title,
-    @required String contentUrl,
+    String? title,
+    required String contentUrl,
   }) = _GqlImage;
 
   /// Creates a [GqlImage] from json.
@@ -112,51 +161,37 @@ abstract class GqlImage with _$GqlImage {
       _$GqlImageFromJson(json);
 }
 
-List<GqlImage> _statusIconsFromJson(Map<String, dynamic> json) => json != null
-    ? (json['edges'] as List)
-        ?.map((dynamic e) => e == null || e['node'] == null
-            ? null
-            : GqlImage.fromJson(e['node'] as Map<String, dynamic>))
-        ?.toList()
-    : null;
-
-List<PoiCategory> _poiCategoriesFromJson(Map<String, dynamic> json) =>
-    json != null
-        ? (json['edges'] as List)
-            ?.map((dynamic e) => e == null || e['node'] == null
-                ? null
-                : PoiCategory.fromJson(e['node'] as Map<String, dynamic>))
-            ?.toList()
-        : null;
-
-double _coordFromJson(String coord) =>
-    (coord != null && coord.isNotEmpty) ? double.parse(coord) : null;
-
-PoiFloor _poiFloorFromJson(Map<String, dynamic> json) {
-  final list = (json['edges'] as List)
-      ?.map((dynamic e) => e == null || e['node'] == null
-          ? null
-          : PoiFloor.fromJson(e['node'] as Map<String, dynamic>))
-      ?.toList();
-
-  return list?.firstOrNull;
+List<GqlImage> _gqlImagesFromJson(Map<String, dynamic>? json) {
+  return (json?['edges'] as List?)?.deserializeGqlList(
+        (map) => GqlImage.fromJson(map),
+      ) ??
+      <GqlImage>[];
 }
 
-PoiBuilding _poiBuildingFromJson(Map<String, dynamic> json) {
-  final list = (json['edges'] as List)
-      ?.map((dynamic e) => e == null || e['node'] == null
-          ? null
-          : PoiBuilding.fromJson(e['node'] as Map<String, dynamic>))
-      ?.toList();
-
-  return list?.firstOrNull;
+List<PoiCategory> _poiCategoriesFromJson(Map<String, dynamic>? json) {
+  return (json?['edges'] as List?)?.deserializeGqlList(
+        (map) => PoiCategory.fromJson(map),
+      ) ??
+      <PoiCategory>[];
 }
 
-extension ListExtensions<T> on List<T> {
-  T get firstOrNull => isEmpty ? null : first;
-  T firstWhereOrDefault(bool Function(T) test, [T defaultValue]) {
-    return firstWhere(test, orElse: () => defaultValue);
-  }
+double? _coordFromJson(String? coord) =>
+    (coord != null && coord.isNotEmpty) ? double.tryParse(coord) : null;
 
-  List<T> clone() => List<T>.from(this);
+PoiFloor? _poiFloorFromJson(Map<String, dynamic>? json) {
+  final list = (json?['edges'] as List?)?.deserializeGqlList(
+        (map) => PoiFloor.fromJson(map),
+      ) ??
+      <PoiFloor>[];
+
+  return list.firstOrNull;
+}
+
+PoiBuilding? _poiBuildingFromJson(Map<String, dynamic>? json) {
+  final list = (json?['edges'] as List?)?.deserializeGqlList(
+        (map) => PoiBuilding.fromJson(map),
+      ) ??
+      <PoiBuilding>[];
+
+  return list.firstOrNull;
 }

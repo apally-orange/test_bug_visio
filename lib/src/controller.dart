@@ -8,16 +8,15 @@ const String _channelName = 'com.orange.obs.myplace.plugins/map_view';
 class MapViewController {
   /// Create a [MapViewController]
   MapViewController({
-    @required this.id,
+    required this.id,
   }) {
     _channel = MethodChannel('$_channelName$id');
     _channel.setMethodCallHandler(methodCallHandler);
   }
 
   final int id;
-  MethodChannel _channel;
-
-  VoidCallback onMapReady;
+  late MethodChannel _channel;
+  VoidCallback? onMapReady;
 
   /// To start a navigation to a Poi
   Future<void> startNavigationToPlace(String placeId) async {
@@ -31,7 +30,7 @@ class MapViewController {
 
   /// To update list pois
   Future<void> updatePlaces(List<Poi> places) async {
-    if (places != null && places.isNotEmpty) {
+    if (places.isNotEmpty) {
       return _channel.invokeMethod(
         'map#updatePlaces',
         places.map((p) => p.toJson()).toList(),
@@ -46,7 +45,7 @@ class MapViewController {
     switch (call.method) {
       case 'map#isReady':
         if (onMapReady != null) {
-          onMapReady();
+          onMapReady!.call();
           onMapReady = null; //To call only one by map
         }
         return;

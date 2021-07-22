@@ -42,7 +42,7 @@ class MapService {
 
   Future<void> startNavigationToPoi(Poi poi) async {
     final MapViewController controller = await currentCompleter.future;
-    controller.startNavigationToPlace(poi.location);
+    controller.startNavigationToPlace(poi.location!);
   }
 
   Future<void> updatePlaces(List<Poi> pois) async {

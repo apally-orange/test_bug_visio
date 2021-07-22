@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'poi.dart';
 
@@ -8,6 +8,10 @@ part of 'poi.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 PoiBuilding _$PoiBuildingFromJson(Map<String, dynamic> json) {
   return _PoiBuilding.fromJson(json);
 }
@@ -16,42 +20,50 @@ PoiBuilding _$PoiBuildingFromJson(Map<String, dynamic> json) {
 class _$PoiBuildingTearOff {
   const _$PoiBuildingTearOff();
 
-// ignore: unused_element
   _PoiBuilding call(
-      {@required String id,
-      String externalId,
-      String remoteControlId,
-      String flexOfficeId,
-      String title}) {
+      {required String id,
+      String? externalId,
+      String? remoteControlId,
+      String? flexOfficeId,
+      required String title,
+      int minFloor = 0,
+      int maxFloor = 0,
+      bool isFake = false}) {
     return _PoiBuilding(
       id: id,
       externalId: externalId,
       remoteControlId: remoteControlId,
       flexOfficeId: flexOfficeId,
       title: title,
+      minFloor: minFloor,
+      maxFloor: maxFloor,
+      isFake: isFake,
     );
   }
 
-// ignore: unused_element
   PoiBuilding fromJson(Map<String, Object> json) {
     return PoiBuilding.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $PoiBuilding = _$PoiBuildingTearOff();
 
 /// @nodoc
 mixin _$PoiBuilding {
-  String get id;
-  String get externalId;
-  String get remoteControlId;
-  String get flexOfficeId;
-  String get title;
+  String get id => throw _privateConstructorUsedError;
+  String? get externalId => throw _privateConstructorUsedError;
+  String? get remoteControlId => throw _privateConstructorUsedError;
+  String? get flexOfficeId => throw _privateConstructorUsedError;
+  String get title => throw _privateConstructorUsedError;
+  int get minFloor => throw _privateConstructorUsedError;
+  int get maxFloor => throw _privateConstructorUsedError;
+  bool get isFake => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $PoiBuildingCopyWith<PoiBuilding> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $PoiBuildingCopyWith<PoiBuilding> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -61,10 +73,13 @@ abstract class $PoiBuildingCopyWith<$Res> {
       _$PoiBuildingCopyWithImpl<$Res>;
   $Res call(
       {String id,
-      String externalId,
-      String remoteControlId,
-      String flexOfficeId,
-      String title});
+      String? externalId,
+      String? remoteControlId,
+      String? flexOfficeId,
+      String title,
+      int minFloor,
+      int maxFloor,
+      bool isFake});
 }
 
 /// @nodoc
@@ -77,23 +92,48 @@ class _$PoiBuildingCopyWithImpl<$Res> implements $PoiBuildingCopyWith<$Res> {
 
   @override
   $Res call({
-    Object id = freezed,
-    Object externalId = freezed,
-    Object remoteControlId = freezed,
-    Object flexOfficeId = freezed,
-    Object title = freezed,
+    Object? id = freezed,
+    Object? externalId = freezed,
+    Object? remoteControlId = freezed,
+    Object? flexOfficeId = freezed,
+    Object? title = freezed,
+    Object? minFloor = freezed,
+    Object? maxFloor = freezed,
+    Object? isFake = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String,
-      externalId:
-          externalId == freezed ? _value.externalId : externalId as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      externalId: externalId == freezed
+          ? _value.externalId
+          : externalId // ignore: cast_nullable_to_non_nullable
+              as String?,
       remoteControlId: remoteControlId == freezed
           ? _value.remoteControlId
-          : remoteControlId as String,
+          : remoteControlId // ignore: cast_nullable_to_non_nullable
+              as String?,
       flexOfficeId: flexOfficeId == freezed
           ? _value.flexOfficeId
-          : flexOfficeId as String,
-      title: title == freezed ? _value.title : title as String,
+          : flexOfficeId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String,
+      minFloor: minFloor == freezed
+          ? _value.minFloor
+          : minFloor // ignore: cast_nullable_to_non_nullable
+              as int,
+      maxFloor: maxFloor == freezed
+          ? _value.maxFloor
+          : maxFloor // ignore: cast_nullable_to_non_nullable
+              as int,
+      isFake: isFake == freezed
+          ? _value.isFake
+          : isFake // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -107,10 +147,13 @@ abstract class _$PoiBuildingCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      String externalId,
-      String remoteControlId,
-      String flexOfficeId,
-      String title});
+      String? externalId,
+      String? remoteControlId,
+      String? flexOfficeId,
+      String title,
+      int minFloor,
+      int maxFloor,
+      bool isFake});
 }
 
 /// @nodoc
@@ -125,38 +168,65 @@ class __$PoiBuildingCopyWithImpl<$Res> extends _$PoiBuildingCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object externalId = freezed,
-    Object remoteControlId = freezed,
-    Object flexOfficeId = freezed,
-    Object title = freezed,
+    Object? id = freezed,
+    Object? externalId = freezed,
+    Object? remoteControlId = freezed,
+    Object? flexOfficeId = freezed,
+    Object? title = freezed,
+    Object? minFloor = freezed,
+    Object? maxFloor = freezed,
+    Object? isFake = freezed,
   }) {
     return _then(_PoiBuilding(
-      id: id == freezed ? _value.id : id as String,
-      externalId:
-          externalId == freezed ? _value.externalId : externalId as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      externalId: externalId == freezed
+          ? _value.externalId
+          : externalId // ignore: cast_nullable_to_non_nullable
+              as String?,
       remoteControlId: remoteControlId == freezed
           ? _value.remoteControlId
-          : remoteControlId as String,
+          : remoteControlId // ignore: cast_nullable_to_non_nullable
+              as String?,
       flexOfficeId: flexOfficeId == freezed
           ? _value.flexOfficeId
-          : flexOfficeId as String,
-      title: title == freezed ? _value.title : title as String,
+          : flexOfficeId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String,
+      minFloor: minFloor == freezed
+          ? _value.minFloor
+          : minFloor // ignore: cast_nullable_to_non_nullable
+              as int,
+      maxFloor: maxFloor == freezed
+          ? _value.maxFloor
+          : maxFloor // ignore: cast_nullable_to_non_nullable
+              as int,
+      isFake: isFake == freezed
+          ? _value.isFake
+          : isFake // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
 
-@JsonSerializable(explicitToJson: true)
-
 /// @nodoc
-class _$_PoiBuilding with DiagnosticableTreeMixin implements _PoiBuilding {
+
+@JsonSerializable(explicitToJson: true)
+class _$_PoiBuilding implements _PoiBuilding {
   const _$_PoiBuilding(
-      {@required this.id,
+      {required this.id,
       this.externalId,
       this.remoteControlId,
       this.flexOfficeId,
-      this.title})
-      : assert(id != null);
+      required this.title,
+      this.minFloor = 0,
+      this.maxFloor = 0,
+      this.isFake = false});
 
   factory _$_PoiBuilding.fromJson(Map<String, dynamic> json) =>
       _$_$_PoiBuildingFromJson(json);
@@ -164,29 +234,26 @@ class _$_PoiBuilding with DiagnosticableTreeMixin implements _PoiBuilding {
   @override
   final String id;
   @override
-  final String externalId;
+  final String? externalId;
   @override
-  final String remoteControlId;
+  final String? remoteControlId;
   @override
-  final String flexOfficeId;
+  final String? flexOfficeId;
   @override
   final String title;
+  @JsonKey(defaultValue: 0)
+  @override
+  final int minFloor;
+  @JsonKey(defaultValue: 0)
+  @override
+  final int maxFloor;
+  @JsonKey(defaultValue: false)
+  @override
+  final bool isFake;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'PoiBuilding(id: $id, externalId: $externalId, remoteControlId: $remoteControlId, flexOfficeId: $flexOfficeId, title: $title)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'PoiBuilding'))
-      ..add(DiagnosticsProperty('id', id))
-      ..add(DiagnosticsProperty('externalId', externalId))
-      ..add(DiagnosticsProperty('remoteControlId', remoteControlId))
-      ..add(DiagnosticsProperty('flexOfficeId', flexOfficeId))
-      ..add(DiagnosticsProperty('title', title));
+  String toString() {
+    return 'PoiBuilding(id: $id, externalId: $externalId, remoteControlId: $remoteControlId, flexOfficeId: $flexOfficeId, title: $title, minFloor: $minFloor, maxFloor: $maxFloor, isFake: $isFake)';
   }
 
   @override
@@ -205,7 +272,15 @@ class _$_PoiBuilding with DiagnosticableTreeMixin implements _PoiBuilding {
                 const DeepCollectionEquality()
                     .equals(other.flexOfficeId, flexOfficeId)) &&
             (identical(other.title, title) ||
-                const DeepCollectionEquality().equals(other.title, title)));
+                const DeepCollectionEquality().equals(other.title, title)) &&
+            (identical(other.minFloor, minFloor) ||
+                const DeepCollectionEquality()
+                    .equals(other.minFloor, minFloor)) &&
+            (identical(other.maxFloor, maxFloor) ||
+                const DeepCollectionEquality()
+                    .equals(other.maxFloor, maxFloor)) &&
+            (identical(other.isFake, isFake) ||
+                const DeepCollectionEquality().equals(other.isFake, isFake)));
   }
 
   @override
@@ -215,8 +290,12 @@ class _$_PoiBuilding with DiagnosticableTreeMixin implements _PoiBuilding {
       const DeepCollectionEquality().hash(externalId) ^
       const DeepCollectionEquality().hash(remoteControlId) ^
       const DeepCollectionEquality().hash(flexOfficeId) ^
-      const DeepCollectionEquality().hash(title);
+      const DeepCollectionEquality().hash(title) ^
+      const DeepCollectionEquality().hash(minFloor) ^
+      const DeepCollectionEquality().hash(maxFloor) ^
+      const DeepCollectionEquality().hash(isFake);
 
+  @JsonKey(ignore: true)
   @override
   _$PoiBuildingCopyWith<_PoiBuilding> get copyWith =>
       __$PoiBuildingCopyWithImpl<_PoiBuilding>(this, _$identity);
@@ -229,27 +308,38 @@ class _$_PoiBuilding with DiagnosticableTreeMixin implements _PoiBuilding {
 
 abstract class _PoiBuilding implements PoiBuilding {
   const factory _PoiBuilding(
-      {@required String id,
-      String externalId,
-      String remoteControlId,
-      String flexOfficeId,
-      String title}) = _$_PoiBuilding;
+      {required String id,
+      String? externalId,
+      String? remoteControlId,
+      String? flexOfficeId,
+      required String title,
+      int minFloor,
+      int maxFloor,
+      bool isFake}) = _$_PoiBuilding;
 
   factory _PoiBuilding.fromJson(Map<String, dynamic> json) =
       _$_PoiBuilding.fromJson;
 
   @override
-  String get id;
+  String get id => throw _privateConstructorUsedError;
   @override
-  String get externalId;
+  String? get externalId => throw _privateConstructorUsedError;
   @override
-  String get remoteControlId;
+  String? get remoteControlId => throw _privateConstructorUsedError;
   @override
-  String get flexOfficeId;
+  String? get flexOfficeId => throw _privateConstructorUsedError;
   @override
-  String get title;
+  String get title => throw _privateConstructorUsedError;
   @override
-  _$PoiBuildingCopyWith<_PoiBuilding> get copyWith;
+  int get minFloor => throw _privateConstructorUsedError;
+  @override
+  int get maxFloor => throw _privateConstructorUsedError;
+  @override
+  bool get isFake => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$PoiBuildingCopyWith<_PoiBuilding> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 PoiFloor _$PoiFloorFromJson(Map<String, dynamic> json) {
@@ -260,38 +350,49 @@ PoiFloor _$PoiFloorFromJson(Map<String, dynamic> json) {
 class _$PoiFloorTearOff {
   const _$PoiFloorTearOff();
 
-// ignore: unused_element
-  _PoiFloor call({String title, String flexOfficeId}) {
+  _PoiFloor call(
+      {String? title,
+      String? flexOfficeId,
+      int? floorIndex,
+      String? visioglobeId}) {
     return _PoiFloor(
       title: title,
       flexOfficeId: flexOfficeId,
+      floorIndex: floorIndex,
+      visioglobeId: visioglobeId,
     );
   }
 
-// ignore: unused_element
   PoiFloor fromJson(Map<String, Object> json) {
     return PoiFloor.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $PoiFloor = _$PoiFloorTearOff();
 
 /// @nodoc
 mixin _$PoiFloor {
-  String get title;
-  String get flexOfficeId;
+  String? get title => throw _privateConstructorUsedError;
+  String? get flexOfficeId => throw _privateConstructorUsedError;
+  int? get floorIndex => throw _privateConstructorUsedError;
+  String? get visioglobeId => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $PoiFloorCopyWith<PoiFloor> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $PoiFloorCopyWith<PoiFloor> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $PoiFloorCopyWith<$Res> {
   factory $PoiFloorCopyWith(PoiFloor value, $Res Function(PoiFloor) then) =
       _$PoiFloorCopyWithImpl<$Res>;
-  $Res call({String title, String flexOfficeId});
+  $Res call(
+      {String? title,
+      String? flexOfficeId,
+      int? floorIndex,
+      String? visioglobeId});
 }
 
 /// @nodoc
@@ -304,14 +405,28 @@ class _$PoiFloorCopyWithImpl<$Res> implements $PoiFloorCopyWith<$Res> {
 
   @override
   $Res call({
-    Object title = freezed,
-    Object flexOfficeId = freezed,
+    Object? title = freezed,
+    Object? flexOfficeId = freezed,
+    Object? floorIndex = freezed,
+    Object? visioglobeId = freezed,
   }) {
     return _then(_value.copyWith(
-      title: title == freezed ? _value.title : title as String,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String?,
       flexOfficeId: flexOfficeId == freezed
           ? _value.flexOfficeId
-          : flexOfficeId as String,
+          : flexOfficeId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      floorIndex: floorIndex == freezed
+          ? _value.floorIndex
+          : floorIndex // ignore: cast_nullable_to_non_nullable
+              as int?,
+      visioglobeId: visioglobeId == freezed
+          ? _value.visioglobeId
+          : visioglobeId // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -321,7 +436,11 @@ abstract class _$PoiFloorCopyWith<$Res> implements $PoiFloorCopyWith<$Res> {
   factory _$PoiFloorCopyWith(_PoiFloor value, $Res Function(_PoiFloor) then) =
       __$PoiFloorCopyWithImpl<$Res>;
   @override
-  $Res call({String title, String flexOfficeId});
+  $Res call(
+      {String? title,
+      String? flexOfficeId,
+      int? floorIndex,
+      String? visioglobeId});
 }
 
 /// @nodoc
@@ -335,44 +454,54 @@ class __$PoiFloorCopyWithImpl<$Res> extends _$PoiFloorCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object title = freezed,
-    Object flexOfficeId = freezed,
+    Object? title = freezed,
+    Object? flexOfficeId = freezed,
+    Object? floorIndex = freezed,
+    Object? visioglobeId = freezed,
   }) {
     return _then(_PoiFloor(
-      title: title == freezed ? _value.title : title as String,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String?,
       flexOfficeId: flexOfficeId == freezed
           ? _value.flexOfficeId
-          : flexOfficeId as String,
+          : flexOfficeId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      floorIndex: floorIndex == freezed
+          ? _value.floorIndex
+          : floorIndex // ignore: cast_nullable_to_non_nullable
+              as int?,
+      visioglobeId: visioglobeId == freezed
+          ? _value.visioglobeId
+          : visioglobeId // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
 
-@JsonSerializable(explicitToJson: true)
-
 /// @nodoc
-class _$_PoiFloor with DiagnosticableTreeMixin implements _PoiFloor {
-  const _$_PoiFloor({this.title, this.flexOfficeId});
+
+@JsonSerializable(explicitToJson: true)
+class _$_PoiFloor implements _PoiFloor {
+  const _$_PoiFloor(
+      {this.title, this.flexOfficeId, this.floorIndex, this.visioglobeId});
 
   factory _$_PoiFloor.fromJson(Map<String, dynamic> json) =>
       _$_$_PoiFloorFromJson(json);
 
   @override
-  final String title;
+  final String? title;
   @override
-  final String flexOfficeId;
+  final String? flexOfficeId;
+  @override
+  final int? floorIndex;
+  @override
+  final String? visioglobeId;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'PoiFloor(title: $title, flexOfficeId: $flexOfficeId)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'PoiFloor'))
-      ..add(DiagnosticsProperty('title', title))
-      ..add(DiagnosticsProperty('flexOfficeId', flexOfficeId));
+  String toString() {
+    return 'PoiFloor(title: $title, flexOfficeId: $flexOfficeId, floorIndex: $floorIndex, visioglobeId: $visioglobeId)';
   }
 
   @override
@@ -383,15 +512,24 @@ class _$_PoiFloor with DiagnosticableTreeMixin implements _PoiFloor {
                 const DeepCollectionEquality().equals(other.title, title)) &&
             (identical(other.flexOfficeId, flexOfficeId) ||
                 const DeepCollectionEquality()
-                    .equals(other.flexOfficeId, flexOfficeId)));
+                    .equals(other.flexOfficeId, flexOfficeId)) &&
+            (identical(other.floorIndex, floorIndex) ||
+                const DeepCollectionEquality()
+                    .equals(other.floorIndex, floorIndex)) &&
+            (identical(other.visioglobeId, visioglobeId) ||
+                const DeepCollectionEquality()
+                    .equals(other.visioglobeId, visioglobeId)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(title) ^
-      const DeepCollectionEquality().hash(flexOfficeId);
+      const DeepCollectionEquality().hash(flexOfficeId) ^
+      const DeepCollectionEquality().hash(floorIndex) ^
+      const DeepCollectionEquality().hash(visioglobeId);
 
+  @JsonKey(ignore: true)
   @override
   _$PoiFloorCopyWith<_PoiFloor> get copyWith =>
       __$PoiFloorCopyWithImpl<_PoiFloor>(this, _$identity);
@@ -403,16 +541,26 @@ class _$_PoiFloor with DiagnosticableTreeMixin implements _PoiFloor {
 }
 
 abstract class _PoiFloor implements PoiFloor {
-  const factory _PoiFloor({String title, String flexOfficeId}) = _$_PoiFloor;
+  const factory _PoiFloor(
+      {String? title,
+      String? flexOfficeId,
+      int? floorIndex,
+      String? visioglobeId}) = _$_PoiFloor;
 
   factory _PoiFloor.fromJson(Map<String, dynamic> json) = _$_PoiFloor.fromJson;
 
   @override
-  String get title;
+  String? get title => throw _privateConstructorUsedError;
   @override
-  String get flexOfficeId;
+  String? get flexOfficeId => throw _privateConstructorUsedError;
   @override
-  _$PoiFloorCopyWith<_PoiFloor> get copyWith;
+  int? get floorIndex => throw _privateConstructorUsedError;
+  @override
+  String? get visioglobeId => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$PoiFloorCopyWith<_PoiFloor> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 PoiCategory _$PoiCategoryFromJson(Map<String, dynamic> json) {
@@ -423,14 +571,13 @@ PoiCategory _$PoiCategoryFromJson(Map<String, dynamic> json) {
 class _$PoiCategoryTearOff {
   const _$PoiCategoryTearOff();
 
-// ignore: unused_element
   _PoiCategory call(
-      {@required String id,
-      @required String title,
-      @required String technicalId,
-      String zoomLevel,
-      GqlImage icon,
-      @JsonKey(fromJson: _statusIconsFromJson) List<GqlImage> statusIcon}) {
+      {required String id,
+      required String title,
+      required String technicalId,
+      String? zoomLevel,
+      GqlImage? icon,
+      @JsonKey(fromJson: _gqlImagesFromJson) List<GqlImage>? statusIcon}) {
     return _PoiCategory(
       id: id,
       title: title,
@@ -441,28 +588,28 @@ class _$PoiCategoryTearOff {
     );
   }
 
-// ignore: unused_element
   PoiCategory fromJson(Map<String, Object> json) {
     return PoiCategory.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $PoiCategory = _$PoiCategoryTearOff();
 
 /// @nodoc
 mixin _$PoiCategory {
-  String get id;
-  String get title;
-  String get technicalId;
-  String get zoomLevel;
-  GqlImage get icon;
-  @JsonKey(fromJson: _statusIconsFromJson)
-  List<GqlImage> get statusIcon;
+  String get id => throw _privateConstructorUsedError;
+  String get title => throw _privateConstructorUsedError;
+  String get technicalId => throw _privateConstructorUsedError;
+  String? get zoomLevel => throw _privateConstructorUsedError;
+  GqlImage? get icon => throw _privateConstructorUsedError;
+  @JsonKey(fromJson: _gqlImagesFromJson)
+  List<GqlImage>? get statusIcon => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $PoiCategoryCopyWith<PoiCategory> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $PoiCategoryCopyWith<PoiCategory> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -474,11 +621,11 @@ abstract class $PoiCategoryCopyWith<$Res> {
       {String id,
       String title,
       String technicalId,
-      String zoomLevel,
-      GqlImage icon,
-      @JsonKey(fromJson: _statusIconsFromJson) List<GqlImage> statusIcon});
+      String? zoomLevel,
+      GqlImage? icon,
+      @JsonKey(fromJson: _gqlImagesFromJson) List<GqlImage>? statusIcon});
 
-  $GqlImageCopyWith<$Res> get icon;
+  $GqlImageCopyWith<$Res>? get icon;
 }
 
 /// @nodoc
@@ -491,32 +638,48 @@ class _$PoiCategoryCopyWithImpl<$Res> implements $PoiCategoryCopyWith<$Res> {
 
   @override
   $Res call({
-    Object id = freezed,
-    Object title = freezed,
-    Object technicalId = freezed,
-    Object zoomLevel = freezed,
-    Object icon = freezed,
-    Object statusIcon = freezed,
+    Object? id = freezed,
+    Object? title = freezed,
+    Object? technicalId = freezed,
+    Object? zoomLevel = freezed,
+    Object? icon = freezed,
+    Object? statusIcon = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String,
-      title: title == freezed ? _value.title : title as String,
-      technicalId:
-          technicalId == freezed ? _value.technicalId : technicalId as String,
-      zoomLevel: zoomLevel == freezed ? _value.zoomLevel : zoomLevel as String,
-      icon: icon == freezed ? _value.icon : icon as GqlImage,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String,
+      technicalId: technicalId == freezed
+          ? _value.technicalId
+          : technicalId // ignore: cast_nullable_to_non_nullable
+              as String,
+      zoomLevel: zoomLevel == freezed
+          ? _value.zoomLevel
+          : zoomLevel // ignore: cast_nullable_to_non_nullable
+              as String?,
+      icon: icon == freezed
+          ? _value.icon
+          : icon // ignore: cast_nullable_to_non_nullable
+              as GqlImage?,
       statusIcon: statusIcon == freezed
           ? _value.statusIcon
-          : statusIcon as List<GqlImage>,
+          : statusIcon // ignore: cast_nullable_to_non_nullable
+              as List<GqlImage>?,
     ));
   }
 
   @override
-  $GqlImageCopyWith<$Res> get icon {
+  $GqlImageCopyWith<$Res>? get icon {
     if (_value.icon == null) {
       return null;
     }
-    return $GqlImageCopyWith<$Res>(_value.icon, (value) {
+
+    return $GqlImageCopyWith<$Res>(_value.icon!, (value) {
       return _then(_value.copyWith(icon: value));
     });
   }
@@ -533,12 +696,12 @@ abstract class _$PoiCategoryCopyWith<$Res>
       {String id,
       String title,
       String technicalId,
-      String zoomLevel,
-      GqlImage icon,
-      @JsonKey(fromJson: _statusIconsFromJson) List<GqlImage> statusIcon});
+      String? zoomLevel,
+      GqlImage? icon,
+      @JsonKey(fromJson: _gqlImagesFromJson) List<GqlImage>? statusIcon});
 
   @override
-  $GqlImageCopyWith<$Res> get icon;
+  $GqlImageCopyWith<$Res>? get icon;
 }
 
 /// @nodoc
@@ -553,41 +716,53 @@ class __$PoiCategoryCopyWithImpl<$Res> extends _$PoiCategoryCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object title = freezed,
-    Object technicalId = freezed,
-    Object zoomLevel = freezed,
-    Object icon = freezed,
-    Object statusIcon = freezed,
+    Object? id = freezed,
+    Object? title = freezed,
+    Object? technicalId = freezed,
+    Object? zoomLevel = freezed,
+    Object? icon = freezed,
+    Object? statusIcon = freezed,
   }) {
     return _then(_PoiCategory(
-      id: id == freezed ? _value.id : id as String,
-      title: title == freezed ? _value.title : title as String,
-      technicalId:
-          technicalId == freezed ? _value.technicalId : technicalId as String,
-      zoomLevel: zoomLevel == freezed ? _value.zoomLevel : zoomLevel as String,
-      icon: icon == freezed ? _value.icon : icon as GqlImage,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String,
+      technicalId: technicalId == freezed
+          ? _value.technicalId
+          : technicalId // ignore: cast_nullable_to_non_nullable
+              as String,
+      zoomLevel: zoomLevel == freezed
+          ? _value.zoomLevel
+          : zoomLevel // ignore: cast_nullable_to_non_nullable
+              as String?,
+      icon: icon == freezed
+          ? _value.icon
+          : icon // ignore: cast_nullable_to_non_nullable
+              as GqlImage?,
       statusIcon: statusIcon == freezed
           ? _value.statusIcon
-          : statusIcon as List<GqlImage>,
+          : statusIcon // ignore: cast_nullable_to_non_nullable
+              as List<GqlImage>?,
     ));
   }
 }
 
-@JsonSerializable(explicitToJson: true)
-
 /// @nodoc
-class _$_PoiCategory with DiagnosticableTreeMixin implements _PoiCategory {
+
+@JsonSerializable(explicitToJson: true)
+class _$_PoiCategory implements _PoiCategory {
   const _$_PoiCategory(
-      {@required this.id,
-      @required this.title,
-      @required this.technicalId,
+      {required this.id,
+      required this.title,
+      required this.technicalId,
       this.zoomLevel,
       this.icon,
-      @JsonKey(fromJson: _statusIconsFromJson) this.statusIcon})
-      : assert(id != null),
-        assert(title != null),
-        assert(technicalId != null);
+      @JsonKey(fromJson: _gqlImagesFromJson) this.statusIcon});
 
   factory _$_PoiCategory.fromJson(Map<String, dynamic> json) =>
       _$_$_PoiCategoryFromJson(json);
@@ -599,29 +774,16 @@ class _$_PoiCategory with DiagnosticableTreeMixin implements _PoiCategory {
   @override
   final String technicalId;
   @override
-  final String zoomLevel;
+  final String? zoomLevel;
   @override
-  final GqlImage icon;
+  final GqlImage? icon;
   @override
-  @JsonKey(fromJson: _statusIconsFromJson)
-  final List<GqlImage> statusIcon;
+  @JsonKey(fromJson: _gqlImagesFromJson)
+  final List<GqlImage>? statusIcon;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'PoiCategory(id: $id, title: $title, technicalId: $technicalId, zoomLevel: $zoomLevel, icon: $icon, statusIcon: $statusIcon)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'PoiCategory'))
-      ..add(DiagnosticsProperty('id', id))
-      ..add(DiagnosticsProperty('title', title))
-      ..add(DiagnosticsProperty('technicalId', technicalId))
-      ..add(DiagnosticsProperty('zoomLevel', zoomLevel))
-      ..add(DiagnosticsProperty('icon', icon))
-      ..add(DiagnosticsProperty('statusIcon', statusIcon));
   }
 
   @override
@@ -655,6 +817,7 @@ class _$_PoiCategory with DiagnosticableTreeMixin implements _PoiCategory {
       const DeepCollectionEquality().hash(icon) ^
       const DeepCollectionEquality().hash(statusIcon);
 
+  @JsonKey(ignore: true)
   @override
   _$PoiCategoryCopyWith<_PoiCategory> get copyWith =>
       __$PoiCategoryCopyWithImpl<_PoiCategory>(this, _$identity);
@@ -667,32 +830,34 @@ class _$_PoiCategory with DiagnosticableTreeMixin implements _PoiCategory {
 
 abstract class _PoiCategory implements PoiCategory {
   const factory _PoiCategory(
-          {@required String id,
-          @required String title,
-          @required String technicalId,
-          String zoomLevel,
-          GqlImage icon,
-          @JsonKey(fromJson: _statusIconsFromJson) List<GqlImage> statusIcon}) =
+          {required String id,
+          required String title,
+          required String technicalId,
+          String? zoomLevel,
+          GqlImage? icon,
+          @JsonKey(fromJson: _gqlImagesFromJson) List<GqlImage>? statusIcon}) =
       _$_PoiCategory;
 
   factory _PoiCategory.fromJson(Map<String, dynamic> json) =
       _$_PoiCategory.fromJson;
 
   @override
-  String get id;
+  String get id => throw _privateConstructorUsedError;
   @override
-  String get title;
+  String get title => throw _privateConstructorUsedError;
   @override
-  String get technicalId;
+  String get technicalId => throw _privateConstructorUsedError;
   @override
-  String get zoomLevel;
+  String? get zoomLevel => throw _privateConstructorUsedError;
   @override
-  GqlImage get icon;
+  GqlImage? get icon => throw _privateConstructorUsedError;
   @override
-  @JsonKey(fromJson: _statusIconsFromJson)
-  List<GqlImage> get statusIcon;
+  @JsonKey(fromJson: _gqlImagesFromJson)
+  List<GqlImage>? get statusIcon => throw _privateConstructorUsedError;
   @override
-  _$PoiCategoryCopyWith<_PoiCategory> get copyWith;
+  @JsonKey(ignore: true)
+  _$PoiCategoryCopyWith<_PoiCategory> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 Poi _$PoiFromJson(Map<String, dynamic> json) {
@@ -703,20 +868,26 @@ Poi _$PoiFromJson(Map<String, dynamic> json) {
 class _$PoiTearOff {
   const _$PoiTearOff();
 
-// ignore: unused_element
   _Poi call(
-      {@required String id,
-      String location,
-      String roomId,
-      RoomStatus roomStatus,
-      String title,
-      String description,
-      String shortDescription,
-      @JsonKey(fromJson: _coordFromJson) double latitude,
-      @JsonKey(fromJson: _coordFromJson) double longitude,
-      @JsonKey(fromJson: _poiCategoriesFromJson) List<PoiCategory> categories,
-      @JsonKey(fromJson: _poiBuildingFromJson) PoiBuilding building,
-      @JsonKey(fromJson: _poiFloorFromJson) PoiFloor floor}) {
+      {required String id,
+      String? location,
+      String? roomId,
+      RoomStatus? roomStatus,
+      String? title,
+      String? description,
+      String? shortDescription,
+      @JsonKey(fromJson: _coordFromJson)
+          double? latitude,
+      @JsonKey(fromJson: _coordFromJson)
+          double? longitude,
+      @JsonKey(fromJson: _poiCategoriesFromJson)
+          List<PoiCategory> categories = const <PoiCategory>[],
+      @JsonKey(fromJson: _poiBuildingFromJson)
+          PoiBuilding? building,
+      @JsonKey(fromJson: _poiFloorFromJson)
+          PoiFloor? floor,
+      @JsonKey(fromJson: _gqlImagesFromJson)
+          List<GqlImage> images = const <GqlImage>[]}) {
     return _Poi(
       id: id,
       location: location,
@@ -730,41 +901,43 @@ class _$PoiTearOff {
       categories: categories,
       building: building,
       floor: floor,
+      images: images,
     );
   }
 
-// ignore: unused_element
   Poi fromJson(Map<String, Object> json) {
     return Poi.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $Poi = _$PoiTearOff();
 
 /// @nodoc
 mixin _$Poi {
-  String get id;
-  String get location;
-  String get roomId;
-  RoomStatus get roomStatus;
-  String get title;
-  String get description;
-  String get shortDescription;
+  String get id => throw _privateConstructorUsedError;
+  String? get location => throw _privateConstructorUsedError;
+  String? get roomId => throw _privateConstructorUsedError;
+  RoomStatus? get roomStatus => throw _privateConstructorUsedError;
+  String? get title => throw _privateConstructorUsedError;
+  String? get description => throw _privateConstructorUsedError;
+  String? get shortDescription => throw _privateConstructorUsedError;
   @JsonKey(fromJson: _coordFromJson)
-  double get latitude;
+  double? get latitude => throw _privateConstructorUsedError;
   @JsonKey(fromJson: _coordFromJson)
-  double get longitude;
+  double? get longitude => throw _privateConstructorUsedError;
   @JsonKey(fromJson: _poiCategoriesFromJson)
-  List<PoiCategory> get categories;
+  List<PoiCategory> get categories => throw _privateConstructorUsedError;
   @JsonKey(fromJson: _poiBuildingFromJson)
-  PoiBuilding get building;
+  PoiBuilding? get building => throw _privateConstructorUsedError;
   @JsonKey(fromJson: _poiFloorFromJson)
-  PoiFloor get floor;
+  PoiFloor? get floor => throw _privateConstructorUsedError;
+  @JsonKey(fromJson: _gqlImagesFromJson)
+  List<GqlImage> get images => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $PoiCopyWith<Poi> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $PoiCopyWith<Poi> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -773,20 +946,21 @@ abstract class $PoiCopyWith<$Res> {
       _$PoiCopyWithImpl<$Res>;
   $Res call(
       {String id,
-      String location,
-      String roomId,
-      RoomStatus roomStatus,
-      String title,
-      String description,
-      String shortDescription,
-      @JsonKey(fromJson: _coordFromJson) double latitude,
-      @JsonKey(fromJson: _coordFromJson) double longitude,
+      String? location,
+      String? roomId,
+      RoomStatus? roomStatus,
+      String? title,
+      String? description,
+      String? shortDescription,
+      @JsonKey(fromJson: _coordFromJson) double? latitude,
+      @JsonKey(fromJson: _coordFromJson) double? longitude,
       @JsonKey(fromJson: _poiCategoriesFromJson) List<PoiCategory> categories,
-      @JsonKey(fromJson: _poiBuildingFromJson) PoiBuilding building,
-      @JsonKey(fromJson: _poiFloorFromJson) PoiFloor floor});
+      @JsonKey(fromJson: _poiBuildingFromJson) PoiBuilding? building,
+      @JsonKey(fromJson: _poiFloorFromJson) PoiFloor? floor,
+      @JsonKey(fromJson: _gqlImagesFromJson) List<GqlImage> images});
 
-  $PoiBuildingCopyWith<$Res> get building;
-  $PoiFloorCopyWith<$Res> get floor;
+  $PoiBuildingCopyWith<$Res>? get building;
+  $PoiFloorCopyWith<$Res>? get floor;
 }
 
 /// @nodoc
@@ -799,57 +973,94 @@ class _$PoiCopyWithImpl<$Res> implements $PoiCopyWith<$Res> {
 
   @override
   $Res call({
-    Object id = freezed,
-    Object location = freezed,
-    Object roomId = freezed,
-    Object roomStatus = freezed,
-    Object title = freezed,
-    Object description = freezed,
-    Object shortDescription = freezed,
-    Object latitude = freezed,
-    Object longitude = freezed,
-    Object categories = freezed,
-    Object building = freezed,
-    Object floor = freezed,
+    Object? id = freezed,
+    Object? location = freezed,
+    Object? roomId = freezed,
+    Object? roomStatus = freezed,
+    Object? title = freezed,
+    Object? description = freezed,
+    Object? shortDescription = freezed,
+    Object? latitude = freezed,
+    Object? longitude = freezed,
+    Object? categories = freezed,
+    Object? building = freezed,
+    Object? floor = freezed,
+    Object? images = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String,
-      location: location == freezed ? _value.location : location as String,
-      roomId: roomId == freezed ? _value.roomId : roomId as String,
-      roomStatus:
-          roomStatus == freezed ? _value.roomStatus : roomStatus as RoomStatus,
-      title: title == freezed ? _value.title : title as String,
-      description:
-          description == freezed ? _value.description : description as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      location: location == freezed
+          ? _value.location
+          : location // ignore: cast_nullable_to_non_nullable
+              as String?,
+      roomId: roomId == freezed
+          ? _value.roomId
+          : roomId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      roomStatus: roomStatus == freezed
+          ? _value.roomStatus
+          : roomStatus // ignore: cast_nullable_to_non_nullable
+              as RoomStatus?,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String?,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
       shortDescription: shortDescription == freezed
           ? _value.shortDescription
-          : shortDescription as String,
-      latitude: latitude == freezed ? _value.latitude : latitude as double,
-      longitude: longitude == freezed ? _value.longitude : longitude as double,
+          : shortDescription // ignore: cast_nullable_to_non_nullable
+              as String?,
+      latitude: latitude == freezed
+          ? _value.latitude
+          : latitude // ignore: cast_nullable_to_non_nullable
+              as double?,
+      longitude: longitude == freezed
+          ? _value.longitude
+          : longitude // ignore: cast_nullable_to_non_nullable
+              as double?,
       categories: categories == freezed
           ? _value.categories
-          : categories as List<PoiCategory>,
-      building: building == freezed ? _value.building : building as PoiBuilding,
-      floor: floor == freezed ? _value.floor : floor as PoiFloor,
+          : categories // ignore: cast_nullable_to_non_nullable
+              as List<PoiCategory>,
+      building: building == freezed
+          ? _value.building
+          : building // ignore: cast_nullable_to_non_nullable
+              as PoiBuilding?,
+      floor: floor == freezed
+          ? _value.floor
+          : floor // ignore: cast_nullable_to_non_nullable
+              as PoiFloor?,
+      images: images == freezed
+          ? _value.images
+          : images // ignore: cast_nullable_to_non_nullable
+              as List<GqlImage>,
     ));
   }
 
   @override
-  $PoiBuildingCopyWith<$Res> get building {
+  $PoiBuildingCopyWith<$Res>? get building {
     if (_value.building == null) {
       return null;
     }
-    return $PoiBuildingCopyWith<$Res>(_value.building, (value) {
+
+    return $PoiBuildingCopyWith<$Res>(_value.building!, (value) {
       return _then(_value.copyWith(building: value));
     });
   }
 
   @override
-  $PoiFloorCopyWith<$Res> get floor {
+  $PoiFloorCopyWith<$Res>? get floor {
     if (_value.floor == null) {
       return null;
     }
-    return $PoiFloorCopyWith<$Res>(_value.floor, (value) {
+
+    return $PoiFloorCopyWith<$Res>(_value.floor!, (value) {
       return _then(_value.copyWith(floor: value));
     });
   }
@@ -862,22 +1073,23 @@ abstract class _$PoiCopyWith<$Res> implements $PoiCopyWith<$Res> {
   @override
   $Res call(
       {String id,
-      String location,
-      String roomId,
-      RoomStatus roomStatus,
-      String title,
-      String description,
-      String shortDescription,
-      @JsonKey(fromJson: _coordFromJson) double latitude,
-      @JsonKey(fromJson: _coordFromJson) double longitude,
+      String? location,
+      String? roomId,
+      RoomStatus? roomStatus,
+      String? title,
+      String? description,
+      String? shortDescription,
+      @JsonKey(fromJson: _coordFromJson) double? latitude,
+      @JsonKey(fromJson: _coordFromJson) double? longitude,
       @JsonKey(fromJson: _poiCategoriesFromJson) List<PoiCategory> categories,
-      @JsonKey(fromJson: _poiBuildingFromJson) PoiBuilding building,
-      @JsonKey(fromJson: _poiFloorFromJson) PoiFloor floor});
+      @JsonKey(fromJson: _poiBuildingFromJson) PoiBuilding? building,
+      @JsonKey(fromJson: _poiFloorFromJson) PoiFloor? floor,
+      @JsonKey(fromJson: _gqlImagesFromJson) List<GqlImage> images});
 
   @override
-  $PoiBuildingCopyWith<$Res> get building;
+  $PoiBuildingCopyWith<$Res>? get building;
   @override
-  $PoiFloorCopyWith<$Res> get floor;
+  $PoiFloorCopyWith<$Res>? get floor;
 }
 
 /// @nodoc
@@ -891,115 +1103,140 @@ class __$PoiCopyWithImpl<$Res> extends _$PoiCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object location = freezed,
-    Object roomId = freezed,
-    Object roomStatus = freezed,
-    Object title = freezed,
-    Object description = freezed,
-    Object shortDescription = freezed,
-    Object latitude = freezed,
-    Object longitude = freezed,
-    Object categories = freezed,
-    Object building = freezed,
-    Object floor = freezed,
+    Object? id = freezed,
+    Object? location = freezed,
+    Object? roomId = freezed,
+    Object? roomStatus = freezed,
+    Object? title = freezed,
+    Object? description = freezed,
+    Object? shortDescription = freezed,
+    Object? latitude = freezed,
+    Object? longitude = freezed,
+    Object? categories = freezed,
+    Object? building = freezed,
+    Object? floor = freezed,
+    Object? images = freezed,
   }) {
     return _then(_Poi(
-      id: id == freezed ? _value.id : id as String,
-      location: location == freezed ? _value.location : location as String,
-      roomId: roomId == freezed ? _value.roomId : roomId as String,
-      roomStatus:
-          roomStatus == freezed ? _value.roomStatus : roomStatus as RoomStatus,
-      title: title == freezed ? _value.title : title as String,
-      description:
-          description == freezed ? _value.description : description as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      location: location == freezed
+          ? _value.location
+          : location // ignore: cast_nullable_to_non_nullable
+              as String?,
+      roomId: roomId == freezed
+          ? _value.roomId
+          : roomId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      roomStatus: roomStatus == freezed
+          ? _value.roomStatus
+          : roomStatus // ignore: cast_nullable_to_non_nullable
+              as RoomStatus?,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String?,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
       shortDescription: shortDescription == freezed
           ? _value.shortDescription
-          : shortDescription as String,
-      latitude: latitude == freezed ? _value.latitude : latitude as double,
-      longitude: longitude == freezed ? _value.longitude : longitude as double,
+          : shortDescription // ignore: cast_nullable_to_non_nullable
+              as String?,
+      latitude: latitude == freezed
+          ? _value.latitude
+          : latitude // ignore: cast_nullable_to_non_nullable
+              as double?,
+      longitude: longitude == freezed
+          ? _value.longitude
+          : longitude // ignore: cast_nullable_to_non_nullable
+              as double?,
       categories: categories == freezed
           ? _value.categories
-          : categories as List<PoiCategory>,
-      building: building == freezed ? _value.building : building as PoiBuilding,
-      floor: floor == freezed ? _value.floor : floor as PoiFloor,
+          : categories // ignore: cast_nullable_to_non_nullable
+              as List<PoiCategory>,
+      building: building == freezed
+          ? _value.building
+          : building // ignore: cast_nullable_to_non_nullable
+              as PoiBuilding?,
+      floor: floor == freezed
+          ? _value.floor
+          : floor // ignore: cast_nullable_to_non_nullable
+              as PoiFloor?,
+      images: images == freezed
+          ? _value.images
+          : images // ignore: cast_nullable_to_non_nullable
+              as List<GqlImage>,
     ));
   }
 }
 
-@JsonSerializable(explicitToJson: true)
-
 /// @nodoc
-class _$_Poi with DiagnosticableTreeMixin implements _Poi {
+
+@JsonSerializable(explicitToJson: true)
+class _$_Poi implements _Poi {
   const _$_Poi(
-      {@required this.id,
+      {required this.id,
       this.location,
       this.roomId,
       this.roomStatus,
       this.title,
       this.description,
       this.shortDescription,
-      @JsonKey(fromJson: _coordFromJson) this.latitude,
-      @JsonKey(fromJson: _coordFromJson) this.longitude,
-      @JsonKey(fromJson: _poiCategoriesFromJson) this.categories,
-      @JsonKey(fromJson: _poiBuildingFromJson) this.building,
-      @JsonKey(fromJson: _poiFloorFromJson) this.floor})
-      : assert(id != null);
+      @JsonKey(fromJson: _coordFromJson)
+          this.latitude,
+      @JsonKey(fromJson: _coordFromJson)
+          this.longitude,
+      @JsonKey(fromJson: _poiCategoriesFromJson)
+          this.categories = const <PoiCategory>[],
+      @JsonKey(fromJson: _poiBuildingFromJson)
+          this.building,
+      @JsonKey(fromJson: _poiFloorFromJson)
+          this.floor,
+      @JsonKey(fromJson: _gqlImagesFromJson)
+          this.images = const <GqlImage>[]});
 
   factory _$_Poi.fromJson(Map<String, dynamic> json) => _$_$_PoiFromJson(json);
 
   @override
   final String id;
   @override
-  final String location;
+  final String? location;
   @override
-  final String roomId;
+  final String? roomId;
   @override
-  final RoomStatus roomStatus;
+  final RoomStatus? roomStatus;
   @override
-  final String title;
+  final String? title;
   @override
-  final String description;
+  final String? description;
   @override
-  final String shortDescription;
-  @override
-  @JsonKey(fromJson: _coordFromJson)
-  final double latitude;
+  final String? shortDescription;
   @override
   @JsonKey(fromJson: _coordFromJson)
-  final double longitude;
+  final double? latitude;
+  @override
+  @JsonKey(fromJson: _coordFromJson)
+  final double? longitude;
   @override
   @JsonKey(fromJson: _poiCategoriesFromJson)
   final List<PoiCategory> categories;
   @override
   @JsonKey(fromJson: _poiBuildingFromJson)
-  final PoiBuilding building;
+  final PoiBuilding? building;
   @override
   @JsonKey(fromJson: _poiFloorFromJson)
-  final PoiFloor floor;
+  final PoiFloor? floor;
+  @override
+  @JsonKey(fromJson: _gqlImagesFromJson)
+  final List<GqlImage> images;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'Poi(id: $id, location: $location, roomId: $roomId, roomStatus: $roomStatus, title: $title, description: $description, shortDescription: $shortDescription, latitude: $latitude, longitude: $longitude, categories: $categories, building: $building, floor: $floor)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'Poi'))
-      ..add(DiagnosticsProperty('id', id))
-      ..add(DiagnosticsProperty('location', location))
-      ..add(DiagnosticsProperty('roomId', roomId))
-      ..add(DiagnosticsProperty('roomStatus', roomStatus))
-      ..add(DiagnosticsProperty('title', title))
-      ..add(DiagnosticsProperty('description', description))
-      ..add(DiagnosticsProperty('shortDescription', shortDescription))
-      ..add(DiagnosticsProperty('latitude', latitude))
-      ..add(DiagnosticsProperty('longitude', longitude))
-      ..add(DiagnosticsProperty('categories', categories))
-      ..add(DiagnosticsProperty('building', building))
-      ..add(DiagnosticsProperty('floor', floor));
+  String toString() {
+    return 'Poi(id: $id, location: $location, roomId: $roomId, roomStatus: $roomStatus, title: $title, description: $description, shortDescription: $shortDescription, latitude: $latitude, longitude: $longitude, categories: $categories, building: $building, floor: $floor, images: $images)';
   }
 
   @override
@@ -1037,7 +1274,9 @@ class _$_Poi with DiagnosticableTreeMixin implements _Poi {
                 const DeepCollectionEquality()
                     .equals(other.building, building)) &&
             (identical(other.floor, floor) ||
-                const DeepCollectionEquality().equals(other.floor, floor)));
+                const DeepCollectionEquality().equals(other.floor, floor)) &&
+            (identical(other.images, images) ||
+                const DeepCollectionEquality().equals(other.images, images)));
   }
 
   @override
@@ -1054,8 +1293,10 @@ class _$_Poi with DiagnosticableTreeMixin implements _Poi {
       const DeepCollectionEquality().hash(longitude) ^
       const DeepCollectionEquality().hash(categories) ^
       const DeepCollectionEquality().hash(building) ^
-      const DeepCollectionEquality().hash(floor);
+      const DeepCollectionEquality().hash(floor) ^
+      const DeepCollectionEquality().hash(images);
 
+  @JsonKey(ignore: true)
   @override
   _$PoiCopyWith<_Poi> get copyWith =>
       __$PoiCopyWithImpl<_Poi>(this, _$identity);
@@ -1068,52 +1309,57 @@ class _$_Poi with DiagnosticableTreeMixin implements _Poi {
 
 abstract class _Poi implements Poi {
   const factory _Poi(
-      {@required String id,
-      String location,
-      String roomId,
-      RoomStatus roomStatus,
-      String title,
-      String description,
-      String shortDescription,
-      @JsonKey(fromJson: _coordFromJson) double latitude,
-      @JsonKey(fromJson: _coordFromJson) double longitude,
+      {required String id,
+      String? location,
+      String? roomId,
+      RoomStatus? roomStatus,
+      String? title,
+      String? description,
+      String? shortDescription,
+      @JsonKey(fromJson: _coordFromJson) double? latitude,
+      @JsonKey(fromJson: _coordFromJson) double? longitude,
       @JsonKey(fromJson: _poiCategoriesFromJson) List<PoiCategory> categories,
-      @JsonKey(fromJson: _poiBuildingFromJson) PoiBuilding building,
-      @JsonKey(fromJson: _poiFloorFromJson) PoiFloor floor}) = _$_Poi;
+      @JsonKey(fromJson: _poiBuildingFromJson) PoiBuilding? building,
+      @JsonKey(fromJson: _poiFloorFromJson) PoiFloor? floor,
+      @JsonKey(fromJson: _gqlImagesFromJson) List<GqlImage> images}) = _$_Poi;
 
   factory _Poi.fromJson(Map<String, dynamic> json) = _$_Poi.fromJson;
 
   @override
-  String get id;
+  String get id => throw _privateConstructorUsedError;
   @override
-  String get location;
+  String? get location => throw _privateConstructorUsedError;
   @override
-  String get roomId;
+  String? get roomId => throw _privateConstructorUsedError;
   @override
-  RoomStatus get roomStatus;
+  RoomStatus? get roomStatus => throw _privateConstructorUsedError;
   @override
-  String get title;
+  String? get title => throw _privateConstructorUsedError;
   @override
-  String get description;
+  String? get description => throw _privateConstructorUsedError;
   @override
-  String get shortDescription;
-  @override
-  @JsonKey(fromJson: _coordFromJson)
-  double get latitude;
+  String? get shortDescription => throw _privateConstructorUsedError;
   @override
   @JsonKey(fromJson: _coordFromJson)
-  double get longitude;
+  double? get latitude => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(fromJson: _coordFromJson)
+  double? get longitude => throw _privateConstructorUsedError;
   @override
   @JsonKey(fromJson: _poiCategoriesFromJson)
-  List<PoiCategory> get categories;
+  List<PoiCategory> get categories => throw _privateConstructorUsedError;
   @override
   @JsonKey(fromJson: _poiBuildingFromJson)
-  PoiBuilding get building;
+  PoiBuilding? get building => throw _privateConstructorUsedError;
   @override
   @JsonKey(fromJson: _poiFloorFromJson)
-  PoiFloor get floor;
+  PoiFloor? get floor => throw _privateConstructorUsedError;
   @override
-  _$PoiCopyWith<_Poi> get copyWith;
+  @JsonKey(fromJson: _gqlImagesFromJson)
+  List<GqlImage> get images => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$PoiCopyWith<_Poi> get copyWith => throw _privateConstructorUsedError;
 }
 
 DirectoryPoi _$DirectoryPoiFromJson(Map<String, dynamic> json) {
@@ -1124,31 +1370,30 @@ DirectoryPoi _$DirectoryPoiFromJson(Map<String, dynamic> json) {
 class _$DirectoryPoiTearOff {
   const _$DirectoryPoiTearOff();
 
-// ignore: unused_element
-  _DirectoryPoi call({@required String id, @required String title}) {
+  _DirectoryPoi call({required String id, required String title}) {
     return _DirectoryPoi(
       id: id,
       title: title,
     );
   }
 
-// ignore: unused_element
   DirectoryPoi fromJson(Map<String, Object> json) {
     return DirectoryPoi.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $DirectoryPoi = _$DirectoryPoiTearOff();
 
 /// @nodoc
 mixin _$DirectoryPoi {
-  String get id;
-  String get title;
+  String get id => throw _privateConstructorUsedError;
+  String get title => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $DirectoryPoiCopyWith<DirectoryPoi> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $DirectoryPoiCopyWith<DirectoryPoi> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1169,12 +1414,18 @@ class _$DirectoryPoiCopyWithImpl<$Res> implements $DirectoryPoiCopyWith<$Res> {
 
   @override
   $Res call({
-    Object id = freezed,
-    Object title = freezed,
+    Object? id = freezed,
+    Object? title = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String,
-      title: title == freezed ? _value.title : title as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -1201,23 +1452,26 @@ class __$DirectoryPoiCopyWithImpl<$Res> extends _$DirectoryPoiCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object title = freezed,
+    Object? id = freezed,
+    Object? title = freezed,
   }) {
     return _then(_DirectoryPoi(
-      id: id == freezed ? _value.id : id as String,
-      title: title == freezed ? _value.title : title as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
-class _$_DirectoryPoi with DiagnosticableTreeMixin implements _DirectoryPoi {
-  const _$_DirectoryPoi({@required this.id, @required this.title})
-      : assert(id != null),
-        assert(title != null);
+@JsonSerializable()
+class _$_DirectoryPoi implements _DirectoryPoi {
+  const _$_DirectoryPoi({required this.id, required this.title});
 
   factory _$_DirectoryPoi.fromJson(Map<String, dynamic> json) =>
       _$_$_DirectoryPoiFromJson(json);
@@ -1228,17 +1482,8 @@ class _$_DirectoryPoi with DiagnosticableTreeMixin implements _DirectoryPoi {
   final String title;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'DirectoryPoi(id: $id, title: $title)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'DirectoryPoi'))
-      ..add(DiagnosticsProperty('id', id))
-      ..add(DiagnosticsProperty('title', title));
   }
 
   @override
@@ -1257,6 +1502,7 @@ class _$_DirectoryPoi with DiagnosticableTreeMixin implements _DirectoryPoi {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(title);
 
+  @JsonKey(ignore: true)
   @override
   _$DirectoryPoiCopyWith<_DirectoryPoi> get copyWith =>
       __$DirectoryPoiCopyWithImpl<_DirectoryPoi>(this, _$identity);
@@ -1268,18 +1514,20 @@ class _$_DirectoryPoi with DiagnosticableTreeMixin implements _DirectoryPoi {
 }
 
 abstract class _DirectoryPoi implements DirectoryPoi {
-  const factory _DirectoryPoi({@required String id, @required String title}) =
+  const factory _DirectoryPoi({required String id, required String title}) =
       _$_DirectoryPoi;
 
   factory _DirectoryPoi.fromJson(Map<String, dynamic> json) =
       _$_DirectoryPoi.fromJson;
 
   @override
-  String get id;
+  String get id => throw _privateConstructorUsedError;
   @override
-  String get title;
+  String get title => throw _privateConstructorUsedError;
   @override
-  _$DirectoryPoiCopyWith<_DirectoryPoi> get copyWith;
+  @JsonKey(ignore: true)
+  _$DirectoryPoiCopyWith<_DirectoryPoi> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 GqlImage _$GqlImageFromJson(Map<String, dynamic> json) {
@@ -1290,38 +1538,37 @@ GqlImage _$GqlImageFromJson(Map<String, dynamic> json) {
 class _$GqlImageTearOff {
   const _$GqlImageTearOff();
 
-// ignore: unused_element
-  _GqlImage call({String title, @required String contentUrl}) {
+  _GqlImage call({String? title, required String contentUrl}) {
     return _GqlImage(
       title: title,
       contentUrl: contentUrl,
     );
   }
 
-// ignore: unused_element
   GqlImage fromJson(Map<String, Object> json) {
     return GqlImage.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $GqlImage = _$GqlImageTearOff();
 
 /// @nodoc
 mixin _$GqlImage {
-  String get title;
-  String get contentUrl;
+  String? get title => throw _privateConstructorUsedError;
+  String get contentUrl => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $GqlImageCopyWith<GqlImage> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $GqlImageCopyWith<GqlImage> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $GqlImageCopyWith<$Res> {
   factory $GqlImageCopyWith(GqlImage value, $Res Function(GqlImage) then) =
       _$GqlImageCopyWithImpl<$Res>;
-  $Res call({String title, String contentUrl});
+  $Res call({String? title, String contentUrl});
 }
 
 /// @nodoc
@@ -1334,13 +1581,18 @@ class _$GqlImageCopyWithImpl<$Res> implements $GqlImageCopyWith<$Res> {
 
   @override
   $Res call({
-    Object title = freezed,
-    Object contentUrl = freezed,
+    Object? title = freezed,
+    Object? contentUrl = freezed,
   }) {
     return _then(_value.copyWith(
-      title: title == freezed ? _value.title : title as String,
-      contentUrl:
-          contentUrl == freezed ? _value.contentUrl : contentUrl as String,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String?,
+      contentUrl: contentUrl == freezed
+          ? _value.contentUrl
+          : contentUrl // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -1350,7 +1602,7 @@ abstract class _$GqlImageCopyWith<$Res> implements $GqlImageCopyWith<$Res> {
   factory _$GqlImageCopyWith(_GqlImage value, $Res Function(_GqlImage) then) =
       __$GqlImageCopyWithImpl<$Res>;
   @override
-  $Res call({String title, String contentUrl});
+  $Res call({String? title, String contentUrl});
 }
 
 /// @nodoc
@@ -1364,44 +1616,38 @@ class __$GqlImageCopyWithImpl<$Res> extends _$GqlImageCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object title = freezed,
-    Object contentUrl = freezed,
+    Object? title = freezed,
+    Object? contentUrl = freezed,
   }) {
     return _then(_GqlImage(
-      title: title == freezed ? _value.title : title as String,
-      contentUrl:
-          contentUrl == freezed ? _value.contentUrl : contentUrl as String,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String?,
+      contentUrl: contentUrl == freezed
+          ? _value.contentUrl
+          : contentUrl // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
-class _$_GqlImage with DiagnosticableTreeMixin implements _GqlImage {
-  const _$_GqlImage({this.title, @required this.contentUrl})
-      : assert(contentUrl != null);
+@JsonSerializable()
+class _$_GqlImage implements _GqlImage {
+  const _$_GqlImage({this.title, required this.contentUrl});
 
   factory _$_GqlImage.fromJson(Map<String, dynamic> json) =>
       _$_$_GqlImageFromJson(json);
 
   @override
-  final String title;
+  final String? title;
   @override
   final String contentUrl;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'GqlImage(title: $title, contentUrl: $contentUrl)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'GqlImage'))
-      ..add(DiagnosticsProperty('title', title))
-      ..add(DiagnosticsProperty('contentUrl', contentUrl));
   }
 
   @override
@@ -1421,6 +1667,7 @@ class _$_GqlImage with DiagnosticableTreeMixin implements _GqlImage {
       const DeepCollectionEquality().hash(title) ^
       const DeepCollectionEquality().hash(contentUrl);
 
+  @JsonKey(ignore: true)
   @override
   _$GqlImageCopyWith<_GqlImage> get copyWith =>
       __$GqlImageCopyWithImpl<_GqlImage>(this, _$identity);
@@ -1432,15 +1679,17 @@ class _$_GqlImage with DiagnosticableTreeMixin implements _GqlImage {
 }
 
 abstract class _GqlImage implements GqlImage {
-  const factory _GqlImage({String title, @required String contentUrl}) =
+  const factory _GqlImage({String? title, required String contentUrl}) =
       _$_GqlImage;
 
   factory _GqlImage.fromJson(Map<String, dynamic> json) = _$_GqlImage.fromJson;
 
   @override
-  String get title;
+  String? get title => throw _privateConstructorUsedError;
   @override
-  String get contentUrl;
+  String get contentUrl => throw _privateConstructorUsedError;
   @override
-  _$GqlImageCopyWith<_GqlImage> get copyWith;
+  @JsonKey(ignore: true)
+  _$GqlImageCopyWith<_GqlImage> get copyWith =>
+      throw _privateConstructorUsedError;
 }

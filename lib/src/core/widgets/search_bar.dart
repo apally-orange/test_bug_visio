@@ -2,19 +2,19 @@ import 'package:flutter/material.dart';
 
 class SearchBar extends StatelessWidget {
   const SearchBar({
-    Key key,
+    Key? key,
     this.controller,
     this.focusNode,
     this.onChanged,
-    this.backIconShow,
+    this.backIconShow = false,
     this.onTapSuffixIcon,
   }) : super(key: key);
 
-  final TextEditingController controller;
-  final FocusNode focusNode;
+  final TextEditingController? controller;
+  final FocusNode? focusNode;
   final bool backIconShow;
-  final VoidCallback onTapSuffixIcon;
-  final ValueChanged<String> onChanged;
+  final VoidCallback? onTapSuffixIcon;
+  final ValueChanged<String>? onChanged;
 
   @override
   Widget build(BuildContext context) {

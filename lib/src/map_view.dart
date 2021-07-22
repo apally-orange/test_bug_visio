@@ -10,19 +10,17 @@ import 'package:test_bug_visio/src/modules/android_view/view.dart';
 class MapView extends StatefulWidget {
   /// Creates a [MapView]
   const MapView({
-    Key key,
-    @required this.mapHashCode,
-    @required this.places,
+    Key? key,
+    required this.mapHashCode,
+    required this.places,
     this.onMapViewCreated,
-    this.isReducedMobilityForItinerary,
+    this.isReducedMobilityForItinerary = false,
     this.favoriteBuildingPlaceId,
     this.promptUserToDownloadMap = false,
-  })  : assert(mapHashCode != null),
-        assert(places != null),
-        super(key: key);
+  }) : super(key: key);
 
   /// Callback method for when the map is ready to be used.
-  final VoidCallback onMapViewCreated;
+  final VoidCallback? onMapViewCreated;
 
   /// The hash code of the map to load.
   final String mapHashCode;
@@ -34,7 +32,7 @@ class MapView extends StatefulWidget {
   final bool isReducedMobilityForItinerary;
 
   /// User choice favorite building visioglobe id
-  final String favoriteBuildingPlaceId;
+  final String? favoriteBuildingPlaceId;
 
   final bool promptUserToDownloadMap;
 
@@ -43,9 +41,9 @@ class MapView extends StatefulWidget {
 }
 
 class _MapViewState extends State<MapView> {
-  Map<String, dynamic> _creationParams;
-  MapViewController controller;
-  MapService _mapService;
+  late Map<String, dynamic> _creationParams;
+  late MapViewController controller;
+  late MapService _mapService;
 
   @override
   void initState() {
@@ -55,7 +53,7 @@ class _MapViewState extends State<MapView> {
       'pois': widget.places.map((p) => p.toJson()).toList(),
       'isReducedMobilityForItinerary': widget.isReducedMobilityForItinerary,
       'favoriteBuildingPlaceId': widget.favoriteBuildingPlaceId,
-      'promptUserToDownloadMap': widget.promptUserToDownloadMap ?? false
+      'promptUserToDownloadMap': widget.promptUserToDownloadMap
     };
     _mapService = context.read<MapService>();
   }
@@ -105,6 +103,6 @@ class _MapViewState extends State<MapView> {
     if (widget.onMapViewCreated == null) {
       return;
     }
-    widget.onMapViewCreated();
+    widget.onMapViewCreated!.call();
   }
 }

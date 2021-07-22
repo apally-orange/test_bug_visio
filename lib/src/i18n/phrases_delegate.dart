@@ -2,33 +2,17 @@
 // ignore_for_file: non_constant_identifier_names
 // ignore_for_file: prefer_const_constructors
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
-import 'package:intl/date_symbol_data_local.dart';
 import 'package:intl/intl.dart';
 
-import 'locales/phrases_en.dart' deferred as phrases_en;
-import 'locales/phrases_fr.dart' deferred as phrases_fr;
+import 'locales/phrases_en.dart' as phrases_en;
+import 'locales/phrases_fr.dart' as phrases_fr;
 import 'phrases.dart';
 
-class _Loader {
-  const _Loader({
-    this.loadLibrary,
-    this.loadPhrases,
-  });
-
-  final Future<dynamic> Function() loadLibrary;
-  final Phrases Function() loadPhrases;
-}
-
-final Map<String, _Loader> _loaders = {
-  'en': _Loader(
-    loadLibrary: phrases_en.loadLibrary,
-    loadPhrases: () => phrases_en.Phrases(),
-  ),
-  'fr': _Loader(
-    loadLibrary: phrases_fr.loadLibrary,
-    loadPhrases: () => phrases_fr.Phrases(),
-  ),
+final Map<String, Phrases> _phrasesMap = {
+  'en': phrases_en.Phrases(),
+  'fr': phrases_fr.Phrases(),
 };
 
 class PhrasesDelegate extends LocalizationsDelegate<Phrases> {
@@ -45,34 +29,34 @@ class PhrasesDelegate extends LocalizationsDelegate<Phrases> {
   }
 
   @override
-  Future<Phrases> load(Locale locale) async {
-    final String name =
-        (locale.countryCode == null || locale.countryCode.isEmpty)
-            ? locale.languageCode
-            : locale.toString();
+  Future<Phrases> load(Locale locale) {
+    final String? countryCode = locale.countryCode;
+    final String name = (countryCode == null || countryCode.isEmpty)
+        ? locale.languageCode
+        : locale.toString();
 
     final String localeName = Intl.canonicalizedLocale(name);
 
-    final String availableLocale = Intl.verifiedLocale(
+    final String? availableLocale = Intl.verifiedLocale(
       localeName,
-      (locale) => _loaders[locale] != null,
+      (locale) => _phrasesMap[locale] != null,
       onFailure: (_) => null,
     );
 
+    Phrases phrases;
+
     if (availableLocale != null) {
-      final _Loader loader = _loaders[availableLocale];
-      if (loader != null) {
-        await loader.loadLibrary();
-
-        // Force the locale in Intl.
-        Intl.defaultLocale = localeName;
-        await initializeDateFormatting(localeName);
-
-        return loader.loadPhrases();
-      }
+      // We already check that the loader for this locale exist
+      phrases = _phrasesMap[availableLocale]!;
+    } else {
+      // We assume the user configure at list one local, if not the application can't run
+      phrases = _phrasesMap[0]!;
     }
 
-    return null;
+    // Force the locale in Intl.
+    Intl.defaultLocale = localeName;
+
+    return SynchronousFuture(phrases);
   }
 
   @override
@@ -80,11 +64,7 @@ class PhrasesDelegate extends LocalizationsDelegate<Phrases> {
     return false;
   }
 
-  static Phrases of(BuildContext context) {
+  static Phrases? of(BuildContext context) {
     return Localizations.of<Phrases>(context, Phrases);
   }
-}
-
-extension BuildContextExtensions on BuildContext {
-  Phrases get phrases => PhrasesDelegate.of(this);
 }

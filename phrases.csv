@@ -1,0 +1,4 @@
+;fr;en
+service.searchbar.hint;Rechercher un lieu;Search for a place
+service.pois.number$plural.one;$n lieu;$n place
+service.pois.number$plural.other;$n lieux;$n places

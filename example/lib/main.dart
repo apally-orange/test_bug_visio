@@ -5,7 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'package:test_bug_visio/myplace_svc_mapview.dart';
 
-String poisWS;
+String poisWS = '';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -15,7 +15,7 @@ Future<void> main() async {
 
 class MyApp extends StatelessWidget {
   const MyApp({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override
@@ -34,7 +34,9 @@ class MyApp extends StatelessWidget {
 }
 
 class SampleMapView extends StatelessWidget {
-  const SampleMapView({Key key}) : super(key: key);
+  const SampleMapView({
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -50,17 +52,18 @@ class SampleMapView extends StatelessWidget {
           IconButton(
             icon: const Icon(Icons.navigation),
             onPressed: () =>
-                mapService.startNavigationToPlace(pois[0].location),
+                mapService.startNavigationToPlace(pois[0].location!),
           ),
           IconButton(
             icon: const Icon(Icons.filter_center_focus),
-            onPressed: () => mapService.focusOnPlace(pois[0].location),
+            onPressed: () => mapService.focusOnPlace(pois[0].location!),
           ),
         ],
       ),
       body: MapView(
         places: pois,
-        mapHashCode: 'm05e57ee028b117e658a07d8b1a4bf0e0f8247bb2',
+        mapHashCode: //bridge code 'm4b29e45535df17be9fffe16a088184690800a1dc',
+            'm05e57ee028b117e658a07d8b1a4bf0e0f8247bb2',
       ),
     );
   }

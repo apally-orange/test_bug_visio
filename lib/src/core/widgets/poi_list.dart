@@ -6,7 +6,7 @@ import 'package:test_bug_visio/src/modules/android_view/notifier.dart';
 
 class PoiListView extends StatelessWidget {
   const PoiListView({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override
@@ -18,7 +18,7 @@ class PoiListView extends StatelessWidget {
       width: double.infinity,
       height: double.infinity,
       padding: const EdgeInsets.only(top: 100),
-      child: pois == null || pois.isEmpty
+      child: pois.isEmpty
           ? const SizedBox()
           : ListView.builder(
               physics: const ClampingScrollPhysics(),
@@ -36,18 +36,17 @@ class PoiListView extends StatelessWidget {
 
 class _PoiListTile extends StatelessWidget {
   const _PoiListTile({
-    @required this.poi,
-    @required this.isFirstTile,
-    Key key,
-  })  : assert(poi != null),
-        super(key: key);
+    required this.poi,
+    required this.isFirstTile,
+    Key? key,
+  }) : super(key: key);
 
   final Poi poi;
   final bool isFirstTile;
 
   @override
   Widget build(BuildContext context) {
-    final categoryImageUrl = poi?.categories?.firstOrNull?.icon?.contentUrl;
+    final categoryImageUrl = poi.categories.first.icon?.contentUrl;
 
     return Container(
       decoration: BoxDecoration(
@@ -63,7 +62,7 @@ class _PoiListTile extends StatelessWidget {
           horizontal: 20,
         ),
         title: Text(
-          poi.title,
+          poi.title ?? '',
         ),
         leading: (categoryImageUrl != null)
             ? Image.network(
@@ -77,7 +76,7 @@ class _PoiListTile extends StatelessWidget {
           if (!currentFocus.hasPrimaryFocus) {
             currentFocus.unfocus();
           }
-          context.read<MapService>().focusOnPlace(poi.location);
+          context.read<MapService>().focusOnPlace(poi.location!);
         },
       ),
     );

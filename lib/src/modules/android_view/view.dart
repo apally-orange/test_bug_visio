@@ -10,26 +10,25 @@ import 'package:test_bug_visio/src/modules/android_view/notifier.dart';
 
 class AndroidMapView extends StatelessWidget {
   const AndroidMapView({
-    Key key,
-    @required this.viewType,
+    Key? key,
+    required this.viewType,
     this.onPlatformViewCreated,
     this.creationParams,
     this.creationParamsCodec,
-    this.pois,
-  })  : assert(viewType != null),
-        super(key: key);
+    this.pois = const <Poi>[],
+  }) : super(key: key);
 
   final String viewType;
-  final PlatformViewCreatedCallback onPlatformViewCreated;
+  final PlatformViewCreatedCallback? onPlatformViewCreated;
   final dynamic creationParams;
-  final MessageCodec<dynamic> creationParamsCodec;
+  final MessageCodec<dynamic>? creationParamsCodec;
   final List<Poi> pois;
 
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProxyProvider0<SearchPoisNotifier>(
       create: (_) => SearchPoisNotifier(),
-      update: (context, old) => old..pois = pois,
+      update: (context, old) => old!..pois = pois,
       child: _View(
         viewType: viewType,
         onPlatformViewCreated: onPlatformViewCreated,
@@ -42,26 +41,25 @@ class AndroidMapView extends StatelessWidget {
 
 class _View extends StatefulWidget {
   const _View({
-    Key key,
-    @required this.viewType,
+    Key? key,
+    required this.viewType,
     this.onPlatformViewCreated,
     this.creationParams,
     this.creationParamsCodec,
-  })  : assert(viewType != null),
-        super(key: key);
+  }) : super(key: key);
 
   final String viewType;
-  final PlatformViewCreatedCallback onPlatformViewCreated;
+  final PlatformViewCreatedCallback? onPlatformViewCreated;
   final dynamic creationParams;
-  final MessageCodec<dynamic> creationParamsCodec;
+  final MessageCodec<dynamic>? creationParamsCodec;
 
   @override
   __ViewState createState() => __ViewState();
 }
 
 class __ViewState extends State<_View> {
-  TextEditingController _controller;
-  FocusNode _focusNode;
+  late TextEditingController _controller;
+  late FocusNode _focusNode;
 
   bool listIsVisible = false;
 
@@ -74,8 +72,8 @@ class __ViewState extends State<_View> {
 
   @override
   void dispose() {
-    _controller?.dispose();
-    _focusNode?.dispose();
+    _controller.dispose();
+    _focusNode.dispose();
     super.dispose();
   }
 

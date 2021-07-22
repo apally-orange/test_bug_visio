@@ -8,9 +8,9 @@ enum MapAction {
 }
 
 @freezed
-abstract class MapPoiAction with _$MapPoiAction {
+class MapPoiAction with _$MapPoiAction {
   const factory MapPoiAction({
-    String poiId,
-    MapAction action,
+    required String poiId,
+    required MapAction action,
   }) = _MapPoiAction;
 }
