@@ -1,0 +1,53 @@
+[
+    {
+        "id": "/poiindoors/a4a13d30-6ada-11eb-83aa-c66dc397d9ee",
+        "location": "6.11",
+        "roomId": "",
+        "title": "Room 6.11",
+        "description": "",
+        "shortDescription": "Bureau d'Arnaud Beausoleil et Cédric Lafargue",
+        "latitude": "44.780289619734",
+        "longitude": "-0.65819098509884",
+        "categories": {
+            "edges": [
+                {
+                    "node": {
+                        "id": "\/poiindoorcategories\/5eaef13e-de9d-11e9-88d6-0ee3bef3a40a",
+                        "title": "Bulle",
+                        "technicalId": "=B13",
+                        "zoomLevel": null,
+                        "icon": {
+                            "contentUrl": "https:\/\/demo-fnow-v4-prp.smartappscenter.com:443\/contentdelivery\/images\/6305f6fc-b9f4-11e9-9b13-1a024f79daa6\/content"
+                        },
+                        "statusIcon": {
+                            "edges": []
+                        }
+                    }
+                }
+            ]
+        },
+        "building": {
+            "edges": [
+                {
+                    "node": {
+                        "id": "\/buildings\/27c1e153-d24d-11ea-8cba-22846ac7efdd",
+                        "externalId": "B1",
+                        "officeproviderbuildingid": "1",
+                        "remoteControlId": null,
+                        "title": "PFB1"
+                    }
+                }
+            ]
+        },
+        "floor": {
+            "edges": [
+                {
+                    "node": {
+                        "title": "B1-RDC",
+                        "flexOfficeId": "0"
+                    }
+                }
+            ]
+        }
+    }
+]

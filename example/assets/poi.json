@@ -1,0 +1,257 @@
+[
+    {
+        "id": "\/poiindoors\/dcae3791-d30d-11ea-8cba-22846ac7efdd",
+        "location": "Room1",
+        "roomId": "2MEETINGROOM",
+        "title": "Meeting Room RSC - Room 1",
+        "description": "",
+        "shortDescription": "Bureau d'Arnaud Beausoleil et Cédric Lafargue",
+        "latitude": "44.780289619734",
+        "longitude": "-0.65819098509884",
+        "categories": {
+            "edges": [
+                {
+                    "node": {
+                        "id": "\/poiindoorcategories\/0d51cf73-d88b-11e9-bc4d-1e7067959098",
+                        "title": "Salle de réunion",
+                        "technicalId": "=B13",
+                        "zoomLevel": null,
+                        "icon": {
+                            "contentUrl": "https:\/\/demo-fnow-v4-prp.smartappscenter.com:443\/contentdelivery\/images\/6305f6fc-b9f4-11e9-9b13-1a024f79daa6\/content"
+                        },
+                        "statusIcon": {
+                            "edges": []
+                        }
+                    }
+                }
+            ]
+        },
+        "building": {
+            "edges": [
+                {
+                    "node": {
+                        "id": "\/buildings\/27c1e153-d24d-11ea-8cba-22846ac7efdd",
+                        "externalId": "B1",
+                        "officeproviderbuildingid": "1",
+                        "remoteControlId": null,
+                        "title": "PFB1"
+                    }
+                }
+            ]
+        },
+        "floor": {
+            "edges": [
+                {
+                    "node": {
+                        "title": "B1-RDC",
+                        "flexOfficeId": "0"
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "id": "\/poiindoors\/dcaf15e8-d30d-11ea-8cba-22846ac7efdd",
+        "location": "Room2",
+        "roomId": "3MEETINGROOM",
+        "title": "Meeting Room Manager - Room 2",
+        "description": "",
+        "shortDescription": "Bureau de Sebastien Lesur et Frédéric Visticot",
+        "latitude": "44.780322475715",
+        "longitude": "-0.65821960642713",
+        "categories": {
+            "edges": [
+                {
+                    "node": {
+                        "id": "\/poiindoorcategories\/0d51cf73-d88b-11e9-bc4d-1e7067959098",
+                        "title": "Salle de réunion",
+                        "technicalId": "=B13",
+                        "zoomLevel": null,
+                        "icon": {
+                            "contentUrl": "https:\/\/demo-fnow-v4-prp.smartappscenter.com:443\/contentdelivery\/images\/6305f6fc-b9f4-11e9-9b13-1a024f79daa6\/content"
+                        },
+                        "statusIcon": {
+                            "edges": []
+                        }
+                    }
+                }
+            ]
+        },
+        "building": {
+            "edges": [
+                {
+                    "node": {
+                        "id": "\/buildings\/27c1e153-d24d-11ea-8cba-22846ac7efdd",
+                        "externalId": "B1",
+                        "officeproviderbuildingid": "1",
+                        "remoteControlId": null,
+                        "title": "PFB1"
+                    }
+                }
+            ]
+        },
+        "floor": {
+            "edges": [
+                {
+                    "node": {
+                        "title": "B1-RDC",
+                        "flexOfficeId": "0"
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "id": "\/poiindoors\/dcb02a1a-d30d-11ea-8cba-22846ac7efdd",
+        "location": "Room3",
+        "roomId": "1FLEXOFFICE",
+        "title": "Bulle DSPM - Room 3",
+        "description": "",
+        "shortDescription": "Bulle DSPM - Room 3",
+        "latitude": "44.780367612328",
+        "longitude": "-0.65825813616337",
+        "categories": {
+            "edges": [
+                {
+                    "node": {
+                        "id": "\/poiindoorcategories\/0d43e856-d88b-11e9-bc4d-1e7067959098",
+                        "title": "Bulle",
+                        "technicalId": "=B4",
+                        "zoomLevel": null,
+                        "icon": {
+                            "contentUrl": "https:\/\/demo-fnow-v4-prp.smartappscenter.com\/contentdelivery\/images\/d29ca19e-f5a1-11e9-a42a-5262d55ed3ca\/content"
+                        },
+                        "statusIcon": {
+                            "edges": []
+                        }
+                    }
+                }
+            ]
+        },
+        "building": {
+            "edges": [
+                {
+                    "node": {
+                        "id": "\/buildings\/27c1e153-d24d-11ea-8cba-22846ac7efdd",
+                        "externalId": "B1",
+                        "officeproviderbuildingid": "1",
+                        "remoteControlId": null,
+                        "title": "PFB1"
+                    }
+                }
+            ]
+        },
+        "floor": {
+            "edges": [
+                {
+                    "node": {
+                        "title": "B1-RDC",
+                        "flexOfficeId": "0"
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "id": "\/poiindoors\/dcb11ea4-d30d-11ea-8cba-22846ac7efdd",
+        "location": "Room4",
+        "roomId": "2FLEXOFFICE",
+        "title": "Bulle DSPM - Room 4",
+        "description": "",
+        "shortDescription": "Bulle DSPM - Room 4",
+        "latitude": "44.780352132907",
+        "longitude": "-0.65831050031342",
+        "categories": {
+            "edges": [
+                {
+                    "node": {
+                        "id": "\/poiindoorcategories\/0d43e856-d88b-11e9-bc4d-1e7067959098",
+                        "title": "Bulle",
+                        "technicalId": "=B4",
+                        "zoomLevel": null,
+                        "icon": {
+                            "contentUrl": "https:\/\/demo-fnow-v4-prp.smartappscenter.com\/contentdelivery\/images\/d29ca19e-f5a1-11e9-a42a-5262d55ed3ca\/content"
+                        },
+                        "statusIcon": {
+                            "edges": []
+                        }
+                    }
+                }
+            ]
+        },
+        "building": {
+            "edges": [
+                {
+                    "node": {
+                        "id": "\/buildings\/27c1e153-d24d-11ea-8cba-22846ac7efdd",
+                        "externalId": "B1",
+                        "officeproviderbuildingid": "1",
+                        "remoteControlId": null,
+                        "title": "PFB1"
+                    }
+                }
+            ]
+        },
+        "floor": {
+            "edges": [
+                {
+                    "node": {
+                        "title": "B1-RDC",
+                        "flexOfficeId": "0"
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "id": "\/poiindoors\/dcbcdff8-d30d-11ea-8cba-22846ac7efdd",
+        "location": "Room5",
+        "roomId": "3FLEXOFFICE",
+        "title": "Bulle FNOW - Room 5",
+        "description": "",
+        "shortDescription": "Bulle FNOW - Room 5",
+        "latitude": "44.780331651656",
+        "longitude": "-0.65835834897181",
+        "categories": {
+            "edges": [
+                {
+                    "node": {
+                        "id": "\/poiindoorcategories\/0d43e856-d88b-11e9-bc4d-1e7067959098",
+                        "title": "Bulle",
+                        "technicalId": "=B4",
+                        "zoomLevel": null,
+                        "icon": {
+                            "contentUrl": "https:\/\/demo-fnow-v4-prp.smartappscenter.com\/contentdelivery\/images\/d29ca19e-f5a1-11e9-a42a-5262d55ed3ca\/content"
+                        },
+                        "statusIcon": {
+                            "edges": []
+                        }
+                    }
+                }
+            ]
+        },
+        "building": {
+            "edges": [
+                {
+                    "node": {
+                        "id": "\/buildings\/27c1e153-d24d-11ea-8cba-22846ac7efdd",
+                        "externalId": "B1",
+                        "officeproviderbuildingid": "1",
+                        "remoteControlId": null,
+                        "title": "PFB1"
+                    }
+                }
+            ]
+        },
+        "floor": {
+            "edges": [
+                {
+                    "node": {
+                        "title": "B1-RDC",
+                        "flexOfficeId": "0"
+                    }
+                }
+            ]
+        }
+    }
+]

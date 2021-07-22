@@ -7,43 +7,92 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0dc097df-168d-409e-a759-f0ecc9a46e90" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/orange/obs/plugins/myplace_svc_mapview/MapView.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/orange/obs/plugins/myplace_svc_mapview/MapViewFactory.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/orange/obs/plugins/myplace_svc_mapview/MapViewPlugin.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/orange/obs/plugins/myplace_svc_mapview/models/Category.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/orange/obs/plugins/myplace_svc_mapview/models/GqlImage.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/orange/obs/plugins/myplace_svc_mapview/models/MapViewLocation.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/orange/obs/plugins/myplace_svc_mapview/models/Poi.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/orange/obs/plugins/myplace_svc_mapview/models/Visibility.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/orange/obs/plugins/myplace_svc_mapview/models/VisioglobeCategory.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/orange/obs/plugins/myplace_svc_mapview/models/VisioglobeData.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/orange/obs/plugins/myplace_svc_mapview/models/VisioglobePlace.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/orange/obs/plugins/myplace_svc_mapview/view_model/ViewModelData.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable/bg_map_button.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable/bg_rounded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable/ic_add_agenda.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable/ic_close.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable/ic_navigate.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable/ic_reporting.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable/shape_circle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/layout/poi_info_layout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/values-fr/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/values/colors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/values/dimens.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/values/styles.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/assets/poi.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/myplace_svc_mapview.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/controller.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/core/widgets/poi_list.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/core/widgets/search_bar.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/data/entities/map_poi_action.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/data/entities/map_poi_action.freezed.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/data/entities/poi.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/data/entities/poi.freezed.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/data/entities/poi.g.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/i18n/locales/phrases_en.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/i18n/locales/phrases_fr.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/i18n/phrases.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/i18n/phrases_delegate.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/map_service.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/map_view.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/modules/android_view/notifier.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/modules/android_view/view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/exemple/test_bug_visio/ThreadedInputConnectionProxyAdapterView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/exemple/test_bug_visio/PluginFactory.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/exemple/test_bug_visio/PluginView.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/exemple/test_bug_visio/TestBugVisioPlugin.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/test_bug_visio.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_2_API_25" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IgnoredFileRootStore">
-    <option name="generatedRoots">
-      <set>
-        <option value="C:\Users\XCNT2590\Git\test\test_bug_visio\.idea" />
-      </set>
-    </option>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="2" />
   </component>
   <component name="ProjectId" id="1d4cNq63vB7Hz1S7rjKaGe6eBa7" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="dart.analysis.tool.window.force.activate" value="false" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../flutter_test_embedded_android_view" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="show.migrate.to.gradle.popup" value="false" />
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -68,5 +117,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

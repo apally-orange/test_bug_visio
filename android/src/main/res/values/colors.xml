@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="popup_title">#152732</color>
+    <color name="popup_subtitle">#566B78</color>
+    <color name="popup_button_disable">#E4E9EC</color>
+    <color name="popup_button">#1A8DFF</color>
+    <color name="room_free" >#47b67c</color>
+    <color name="room_unknown">#d8d8d8</color>
+    <color name="room_occupied">#c63415</color>
+    <color name="room_reserved">#ff6d01</color>
+    <color name="background">#ffffff</color>
+</resources>

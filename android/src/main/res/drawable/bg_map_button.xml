@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <size
+        android:width="@dimen/button_size"
+        android:height="@dimen/button_size" />
+    <corners android:radius="12dp" />
+
+    <solid android:color="@color/popup_button" />
+</shape>

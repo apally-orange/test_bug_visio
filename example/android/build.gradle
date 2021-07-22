@@ -3,6 +3,7 @@ buildscript {
     repositories {
         google()
         jcenter()
+        maven { url 'http://multirepo-oab.si.fr.intraorange/maven-thirdparty' }
     }
 
     dependencies {
@@ -15,6 +16,7 @@ allprojects {
     repositories {
         google()
         jcenter()
+        maven { url 'http://multirepo-oab.si.fr.intraorange/maven-thirdparty' }
     }
 }
 

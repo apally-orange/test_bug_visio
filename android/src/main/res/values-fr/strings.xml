@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="available">Libre</string>
+    <string name="occupied">Occupée</string>
+    <string name="reserved">Réservée</string>
+</resources>
+
