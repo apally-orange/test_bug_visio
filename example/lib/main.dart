@@ -9,7 +9,7 @@ String poisWS = '';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  poisWS = await rootBundle.loadString('assets/poi.json');
+  poisWS = await rootBundle.loadString('assets/poi_bridge.json');
   runApp(const MyApp());
 }
 
@@ -62,8 +62,8 @@ class SampleMapView extends StatelessWidget {
       ),
       body: MapView(
         places: pois,
-        mapHashCode: //bridge code 'm4b29e45535df17be9fffe16a088184690800a1dc',
-            'm05e57ee028b117e658a07d8b1a4bf0e0f8247bb2',
+        mapHashCode: 'm4b29e45535df17be9fffe16a088184690800a1dc',
+        //'m05e57ee028b117e658a07d8b1a4bf0e0f8247bb2',
       ),
     );
   }

@@ -5,7 +5,6 @@ import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'package:test_bug_visio/myplace_svc_mapview.dart';
 import 'package:test_bug_visio/src/data/entities/poi.dart';
-import 'package:test_bug_visio/src/modules/android_view/view.dart';
 
 class MapView extends StatefulWidget {
   /// Creates a [MapView]
@@ -85,12 +84,11 @@ class _MapViewState extends State<MapView> {
   Widget build(BuildContext context) {
     const viewType = 'com.orange.obs.myplace.plugins/map_view';
 
-    return AndroidMapView(
+    return AndroidView(
       viewType: viewType,
       onPlatformViewCreated: _onPlatformViewCreated,
       creationParams: _creationParams,
       creationParamsCodec: const StandardMessageCodec(),
-      pois: widget.places,
     );
   }
 

@@ -90,12 +90,6 @@ class __ViewState extends State<_View> {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        AndroidView(
-          viewType: widget.viewType,
-          onPlatformViewCreated: widget.onPlatformViewCreated,
-          creationParams: widget.creationParams,
-          creationParamsCodec: const StandardMessageCodec(),
-        ),
         // PlatformViewLink(
         //   viewType: widget.viewType,
         //   surfaceFactory: (
